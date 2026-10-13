@@ -21,7 +21,6 @@ A fictional, GTA-inspired open-world gaming hub built with **HTML, CSS, and vani
 2. Open `index.html` in a modern browser.
 3. Click **Street Race** or select a mini-game.
 
-No package installation or build step is required. A local static server is optional; for example, in VS Code use the Live Server extension, or run `python -m http.server 8000` from this folder and visit `http://localhost:8000`.
 
 ## Folder structure
 
@@ -32,10 +31,9 @@ los-santos-gaming/
 ├── css/
 │   └── style.css          # Theme, components, responsive layout
 ├── js/
-│   ├── app.js             # Navigation, shop, profile, map, persistence
-│   ├── race.js            # Canvas-based arcade racing game
-│   └── minigames.js       # Reflex, memory, and quiz game logic
-└── assets/                # Optional local images, audio, and icons
+   ├── app.js             # Navigation, shop, profile, map, persistence
+   ├── race.js            # Canvas-based arcade racing game
+   └── minigames.js       # Reflex, memory, and quiz game logic             
 ```
 
 ## Technologies
