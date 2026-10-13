@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Los Santos Gaming — a fictional open-world gaming hub built with HTML, CSS and JavaScript.">
+  <title>Los Santos Gaming | Enter the City</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" data-page="home" aria-label="Los Santos Gaming home"><span class="brand-mark">LS</span><span>LOS SANTOS<small>G A M I N G</small></span></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+    <nav class="nav" id="nav">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="games">Games</button>
+      <button class="nav-link" data-page="race">Street Race</button>
+      <button class="nav-link" data-page="map">City Map</button>
+      <button class="nav-link" data-page="shop">Shop</button>
+    </nav>
+    <button class="profile-chip" data-page="profile"><span class="avatar-mini">👤</span><span id="navPlayer">StreetKing</span><span class="level-pill" id="navLevel">LV 1</span></button>
+  </header>
+
+  <main>
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-skyline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="hero-content">
+          <p class="eyebrow"><span class="live-dot"></span> THE CITY IS YOURS</p>
+          <h1>WELCOME TO<br><span>LOS SANTOS.</span></h1>
+          <p class="hero-tagline">Drive fast. Think smart. <em>Own the night.</em></p>
+          <p class="hero-copy">A fictional open-world playground packed with street races, challenges, collectibles, and city legends waiting to be made.</p>
+          <div class="hero-actions"><button class="btn btn-primary" data-page="race">▶ PLAY STREET RACE</button><button class="btn btn-ghost" data-page="games">EXPLORE GAMES <span>↗</span></button></div>
+          <div class="hero-stats"><div><strong>04</strong><span>GAME MODES</span></div><div><strong id="heroBest">000</strong><span>YOUR BEST SCORE</span></div><div><strong id="heroCash">$5,000</strong><span>WALLET</span></div></div>
+        </div>
+        <div class="hero-car" aria-hidden="true"><div class="car-glow"></div><div class="car-body"><span class="car-window"></span><span class="car-light left"></span><span class="car-light right"></span></div><div class="wheel wheel-left"></div><div class="wheel wheel-right"></div></div>
+        <div class="hero-stamp">SAN ANDREAS<br><b>AFTER DARK</b></div>
+        <div class="hero-bottom"><span>34° 03' N / 118° 15' W</span><span>LOS SANTOS • EST. 1986</span><span class="scroll-hint">SCROLL TO EXPLORE ↓</span></div>
+      </div>
+
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT MOVE</p><h2>Choose your <em>adventure.</em></h2></div><button class="text-button" data-page="games">ALL MODES ↗</button></div>
+      <div class="mode-grid">
+        <button class="mode-card mode-race" data-page="race"><span class="mode-number">01 / COMPETE</span><span class="mode-icon">🏁</span><h3>Street Race</h3><p>Weave through traffic. Chase the high score.</p><span class="mode-arrow">↗</span></button>
+        <button class="mode-card mode-reflex" data-game="reflex"><span class="mode-number">02 / REACT</span><span class="mode-icon">⚡</span><h3>Reflex Rush</h3><p>Test your timing in a lightning-fast challenge.</p><span class="mode-arrow">↗</span></button>
+        <button class="mode-card mode-memory" data-game="memory"><span class="mode-number">03 / REMEMBER</span><span class="mode-icon">🧠</span><h3>Memory Grid</h3><p>Match the icons before the clock runs out.</p><span class="mode-arrow">↗</span></button>
+        <button class="mode-card mode-quiz" data-game="quiz"><span class="mode-number">04 / OUTSMART</span><span class="mode-icon">🎯</span><h3>City IQ</h3><p>Answer quick-fire questions and earn XP.</p><span class="mode-arrow">↗</span></button>
+      </div>
+      <div class="bottom-feature"><div><p class="eyebrow">BUILD YOUR REP</p><h2>Every legend starts <em>somewhere.</em></h2><p>Play mini-games, earn XP, unlock rewards, and make your name known around the city.</p></div><button class="btn btn-primary" data-page="profile">VIEW MY PROFILE ↗</button></div>
+    </section>
+
+    <section class="page" id="page-games">
+      <div class="page-intro"><p class="eyebrow">PICK YOUR PLAYSTYLE</p><h1>THE <em>GAME MENU.</em></h1><p>Four ways to earn your reputation. Choose a mode and jump in.</p></div>
+      <div class="game-list">
+        <article class="game-row"><div class="game-art art-race">🏎️<span>ARCADE / DRIVING</span></div><div class="game-info"><p class="eyebrow">01 • COMPETE</p><h2>Street Race</h2><p>Take the wheel in a fast arcade driving challenge. Dodge traffic, collect coins, and see how long you can survive.</p><div class="tag-list"><span>KEYBOARD</span><span>ENDLESS</span><span>HIGH SCORE</span></div></div><button class="btn btn-primary" data-page="race">PLAY NOW ↗</button></article>
+        <article class="game-row"><div class="game-art art-reflex">⚡<span>ARCADE / REACTION</span></div><div class="game-info"><p class="eyebrow">02 • REACT</p><h2>Reflex Rush</h2><p>Wait for the signal, then hit the button as quickly as you can. False starts cost you points.</p><div class="tag-list"><span>REACTION TIME</span><span>5 ROUNDS</span></div></div><button class="btn btn-outline" data-game="reflex">PLAY NOW ↗</button></article>
+        <article class="game-row"><div class="game-art art-memory">🧠<span>PUZZLE / MEMORY</span></div><div class="game-info"><p class="eyebrow">03 • REMEMBER</p><h2>Memory Grid</h2><p>Flip cards, find matching pairs, and finish with as few moves as possible.</p><div class="tag-list"><span>PUZZLE</span><span>4 × 4 GRID</span></div></div><button class="btn btn-outline" data-game="memory">PLAY NOW ↗</button></article>
+        <article class="game-row"><div class="game-art art-quiz">🎯<span>TRIVIA / KNOWLEDGE</span></div><div class="game-info"><p class="eyebrow">04 • OUTSMART</p><h2>City IQ</h2><p>Answer five quick-fire questions. Each correct answer earns points and experience.</p><div class="tag-list"><span>5 QUESTIONS</span><span>XP REWARDS</span></div></div><button class="btn btn-outline" data-game="quiz">PLAY NOW ↗</button></article>
+      </div>
+    </section>
+
+    <section class="page" id="page-race">
+      <div class="page-intro compact-intro"><p class="eyebrow">ARCADE MODE / 001</p><h1>STREET <em>RACE.</em></h1><p>Dodge the traffic. Collect the cash. Don't crash.</p></div>
+      <div class="race-layout"><div class="race-panel"><div class="game-hud"><div><span>SCORE</span><strong id="raceScore">0000</strong></div><div><span>COINS</span><strong id="raceCoins">$0</strong></div><div><span>SPEED</span><strong id="raceSpeed">0 KM/H</strong></div><div><span>BEST</span><strong id="raceBest">0000</strong></div></div><div class="canvas-wrap"><canvas id="raceCanvas" width="720" height="520" aria-label="Street racing mini-game"></canvas><div class="race-overlay" id="raceOverlay"><div class="overlay-box"><span class="overlay-icon">🏎️</span><p class="eyebrow">LOS SANTOS MOTOR CLUB</p><h2 id="raceOverlayTitle">READY TO RIDE?</h2><p id="raceOverlayText">Use ← → or A / D to switch lanes. Collect coins and avoid traffic.</p><button class="btn btn-primary" id="startRace">START ENGINE ↗</button></div></div></div><div class="race-controls"><span>← → MOVE</span><span>A / D STEER</span><span>SPACE PAUSE</span><button class="text-button" id="pauseRace">PAUSE II</button></div></div><aside class="race-sidebar"><div class="side-card"><p class="eyebrow">MISSION BRIEF</p><h3>Midnight Run</h3><p>Survive as long as possible and collect cash along the freeway. The road gets faster over time.</p><div class="mission-progress"><span>OBJECTIVE</span><strong>Survive 30 seconds</strong></div><div class="mission-progress"><span>REWARD</span><strong>+100 XP / $250</strong></div></div><div class="side-card"><p class="eyebrow">CONTROLS</p><div class="key-row"><span>Steer left</span><kbd>←</kbd><kbd>A</kbd></div><div class="key-row"><span>Steer right</span><kbd>→</kbd><kbd>D</kbd></div><div class="key-row"><span>Pause</span><kbd>SPACE</kbd></div><p class="muted small">On mobile, tap the left and right buttons below the road.</p><div class="touch-controls"><button id="leftControl">← LEFT</button><button id="rightControl">RIGHT →</button></div></div><div class="side-card record-card"><p class="eyebrow">YOUR RECORD</p><strong id="raceRecordBig">0000</strong><span>PERSONAL BEST</span></div></aside></div>
+    </section>
+
+    <section class="page" id="page-map">
+      <div class="page-intro"><p class="eyebrow">NAVIGATE THE NEIGHBORHOODS</p><h1>THE CITY <em>GRID.</em></h1><p>Pick a destination. Every corner has a story.</p></div>
+      <div class="map-layout"><div class="city-map" id="cityMap"><div class="map-water"></div><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div><div class="map-road road-d"></div><div class="map-road road-e"></div><div class="map-block block-a"></div><div class="map-block block-b"></div><div class="map-block block-c"></div><div class="map-block block-d"></div><div class="map-block block-e"></div><div class="map-block block-f"></div><button class="map-pin pin-garage selected" data-location="garage"><span>🚘</span><b>GARAGE</b></button><button class="map-pin pin-club" data-location="club"><span>🎵</span><b>AFTERHOURS</b></button><button class="map-pin pin-shop" data-location="shop"><span>🛍️</span><b>MARKET</b></button><button class="map-pin pin-hill" data-location="hills"><span>🌴</span><b>VINEWOOD HILLS</b></button><button class="map-pin pin-pier" data-location="pier"><span>🎡</span><b>THE PIER</b></button><div class="map-coordinates">LS GRID / 09-A</div></div><div class="location-panel"><p class="eyebrow">DESTINATION SELECTED</p><div class="location-icon" id="locationIcon">🚘</div><h2 id="locationName">Downtown Garage</h2><p id="locationDescription">Your ride starts here. Tune up, check your stats, and get ready for the streets.</p><div class="location-meta"><span>TYPE</span><strong id="locationType">VEHICLE HUB</strong></div><div class="location-meta"><span>STATUS</span><strong class="status-open">● DISCOVERED</strong></div><button class="btn btn-primary full-width" id="visitLocation">VISIT DESTINATION ↗</button><p class="muted small">This is a fictional, interactive map made for the demo.</p></div></div>
+    </section>
+
+    <section class="page" id="page-shop">
+      <div class="page-intro shop-intro"><div><p class="eyebrow">SPEND YOUR STREET CRED</p><h1>THE <em>BLACK MARKET.</em></h1><p>Cosmetics and rides for your virtual collection. Earn cash by playing games.</p></div><div class="wallet"><span>YOUR WALLET</span><strong id="shopCash">$5,000</strong></div></div>
+      <div class="shop-filters"><button class="filter active" data-filter="all">ALL ITEMS</button><button class="filter" data-filter="vehicle">VEHICLES</button><button class="filter" data-filter="style">STYLE</button><button class="filter" data-filter="boost">BOOSTS</button></div>
+      <div class="shop-grid" id="shopGrid"></div>
+    </section>
+
+    <section class="page" id="page-profile">
+      <div class="page-intro"><p class="eyebrow">YOUR CITY IDENTITY</p><h1>PLAYER <em>PROFILE.</em></h1><p>Your stats, progress, and reputation in one place.</p></div>
+      <div class="profile-layout"><div class="profile-main"><div class="profile-banner"><div class="profile-avatar" id="profileAvatar">😎</div><div class="profile-identity"><span class="eyebrow">LOS SANTOS CITIZEN</span><h2 id="profileName">StreetKing</h2><p id="profileRank">Rookie Driver • Level 1</p></div><button class="btn btn-outline" id="editProfile">EDIT PROFILE ✎</button></div><div class="xp-card"><div class="xp-top"><div><span class="eyebrow">EXPERIENCE</span><h3><span id="profileXP">0</span> <small>/ <span id="nextXP">500</span> XP</small></h3></div><span class="level-badge" id="profileLevel">LV 1</span></div><div class="xp-track"><span id="xpFill"></span></div><p class="muted small" id="xpHint">Earn XP by playing games to reach the next level.</p></div><div class="stats-grid"><div class="stat-card"><span>TOTAL SCORE</span><strong id="statScore">0</strong><small>ALL MODES</small></div><div class="stat-card"><span>RACES PLAYED</span><strong id="statRaces">0</strong><small>STREET RACE</small></div><div class="stat-card"><span>ITEMS OWNED</span><strong id="statItems">0</strong><small>COLLECTION</small></div><div class="stat-card"><span>CASH BALANCE</span><strong id="statCash">$5,000</strong><small>VIRTUAL WALLET</small></div></div><div class="achievement-panel"><div class="section-heading mini-heading"><div><p class="eyebrow">MILESTONES</p><h2>Achievements.</h2></div></div><div class="achievement-grid" id="achievementGrid"></div></div></div><aside class="profile-side"><div class="side-card"><p class="eyebrow">PLAYER SETTINGS</p><label class="field-label" for="playerNameInput">DISPLAY NAME</label><input id="playerNameInput" maxlength="18" placeholder="Enter player name"><button class="btn btn-primary full-width" id="saveName">SAVE NAME</button><button class="btn btn-outline full-width reset-button" id="resetProgress">RESET LOCAL PROGRESS</button><p class="muted small">Progress is saved in this browser using LocalStorage. Resetting is permanent for this browser.</p></div><div class="side-card"><p class="eyebrow">TOP SCORES</p><div id="leaderboard" class="leaderboard"></div></div></aside></div>
+    </section>
+
+    <section class="page" id="page-mini"><div class="page-intro"><p class="eyebrow" id="miniEyebrow">ARCADE MODE</p><h1 id="miniTitle">QUICK <em>CHALLENGE.</em></h1><p id="miniDescription">Take a break and test your skills.</p></div><div class="mini-game-shell" id="miniGameShell"></div></section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="#home" data-page="home"><span class="brand-mark">LS</span><span>LOS SANTOS<small>G A M I N G</small></span></a><p>FICTIONAL CITY. REAL SKILL. MADE FOR THE FUN OF IT.</p><span>VANILLA HTML • CSS • JS</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="editDialog" class="edit-dialog"><form method="dialog" id="editForm"><button class="dialog-close" aria-label="Close">×</button><p class="eyebrow">MAKE IT YOURS</p><h2>Customize player</h2><label class="field-label" for="dialogName">DISPLAY NAME</label><input id="dialogName" maxlength="18" placeholder="StreetKing"><label class="field-label" for="dialogAvatar">AVATAR</label><select id="dialogAvatar"><option>😎</option><option>🕶️</option><option>🏎️</option><option>🦊</option><option>🐺</option><option>👾</option><option>🔥</option></select><button class="btn btn-primary full-width" id="saveProfile" value="save">SAVE CHANGES</button></form></dialog>
+  <script src="js/app.js"></script>
+  <script src="js/race.js"></script>
+  <script src="js/minigames.js"></script>
+</body>
+</html>
